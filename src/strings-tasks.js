@@ -380,9 +380,9 @@ function invertCase(/* str */) {
  *   getStringFromTemplate('John','Doe') => 'Hello, John Doe!'
  *   getStringFromTemplate('Chuck','Norris') => 'Hello, Chuck Norris!'
  */
-function getStringFromTemplate(/*firstName, lastName*/) {
+function getStringFromTemplate(/* firstName, lastName */) {
   throw new Error('Not implemented');
-  //return `Hello, ${firstName} ${lastName}!`;
+  // return `Hello, ${firstName} ${lastName}!`;
 }
 
 /**
@@ -396,7 +396,7 @@ function getStringFromTemplate(/*firstName, lastName*/) {
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-   return value.split(/[,?!.]+/)[1].trim();
+  return value.split(/[,?!.]+/)[1].trim();
 }
 
 /**

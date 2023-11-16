@@ -267,8 +267,8 @@ function reverseString(/* str */) {
  *   orderAlphabetically('textbook') => 'bekoottx'
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
-function orderAlphabetically(/* str */) {
-  throw new Error('Not implemented');
+function orderAlphabetically(str) {
+  return str.split('').sort().join('');
 }
 
 /**
@@ -301,8 +301,16 @@ function containsSubstring(/* str, substring */) {
  *   countVowels('aEiOu') => 5
  *   countVowels('XYZ') => 1
  */
-function countVowels(/* str */) {
-  throw new Error('Not implemented');
+function countVowels(str) {
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+  let count = 0;
+  const str1 = str.toLowerCase();
+  for (let i = 0; i < str1.length; i += 1) {
+    if (vowels.includes(str1[i])) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 /**
@@ -318,8 +326,9 @@ function countVowels(/* str */) {
  *   isPalindrome('apple') => false
  *   isPalindrome('No lemon, no melon') => true
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  const str1 = str.replace(/[^\w]/g, '');
+  return str1.toLowerCase().split('').reverse().join('') === str1.toLowerCase();
 }
 
 /**

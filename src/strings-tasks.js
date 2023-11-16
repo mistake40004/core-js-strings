@@ -252,8 +252,8 @@ function formatTime(minutes, seconds) {
  *   reverseString('abcdef') => 'fedcba'
  *   reverseString('12345') => '54321'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  return str.split('').reverse().join('');
 }
 
 /**
@@ -343,8 +343,17 @@ function isPalindrome(str) {
  *   findLongestWord('A long and winding road') => 'winding'
  *   findLongestWord('No words here') => 'words'
  */
-function findLongestWord(/* sentence */) {
-  throw new Error('Not implemented');
+function findLongestWord(sentence) {
+  const arr = sentence.split(' ');
+  let maxLen = -1;
+  let word = '';
+  for (let i = 0; i < arr.length; i += 1) {
+    if (maxLen < arr[i].length) {
+      word = arr[i];
+      maxLen = arr[i].length;
+    }
+  }
+  return word;
 }
 
 /**
